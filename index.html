@@ -68,6 +68,7 @@
         const banners = document.querySelectorAll('.banner')
         banners.forEach(item => item.addEventListener('mouseover', function () {
                 this.classList.add('active');
+                // remove or hide all other banner background images and show curret banner bg
         }));
         banners.forEach(item => item.addEventListener('mouseleave', function () {
                 this.classList.remove('active');

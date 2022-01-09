@@ -19,12 +19,12 @@ https://wallpaperaccess.com/full/699923.jpg */
 .banner-wrapper {
     height: 100vh;
     width: 100vw;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/309184-call-of-duty-mobile-wallpaper-top-free-call-of-duty-mobile.jpg');
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('1.png');
     background-size: cover;
-    background-position: center;
+    background-position: -32px -37px;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    column-gap: 1rem;
+    /*column-gap: 1rem;*/
     overflow: hidden;
 }
 
@@ -40,7 +40,27 @@ https://wallpaperaccess.com/full/699923.jpg */
     width: 100%;
     position: relative;
     margin-left: 0;
-    transition: box-shadow .6s ease-out, width .3s ease, margin .3s ease;
+    overflow: hidden;
+    transition: box-shadow .6s ease-out, width .3s ease, margin .3s ease, .3s ease;
+}
+
+.banner-wrapper .banner.active::before {
+    position: absolute;
+    content: '';
+    height: 100vh;
+    width: 100vw;
+    right: -75vw;
+    top: 0vh;
+    background-size: cover ;
+    background-position: bottom left;
+    animation: scale 5s linear infinite alternate;
+}
+@keyframes scale {
+    0% {
+        transform: scale(1.5);
+    } 100% {
+        transform: scale(1.1);
+    }
 }
 
 .banner-wrapper .banner::after {
@@ -117,7 +137,7 @@ https://wallpaperaccess.com/full/699923.jpg */
 /* active banner styles */
 .banner.active {
     box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
-    width: 105%;
+    width: 100%;
 }
 .banner.active h1, #banner-2.active h1, #banner-3.active h1, #banner-4.active h1{
     color: #ffffff;
@@ -151,11 +171,19 @@ https://wallpaperaccess.com/full/699923.jpg */
     text-transform: uppercase;
 }
 /* banner1-active styles */
+#banner-1.active::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('1.png') ;
+}
+
 #banner-1.active h1 span._van {
     color: #C1001B;
 }
 
 /* banner2 styles */
+#banner-2.active::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/309184-call-of-duty-mobile-wallpaper-top-free-call-of-duty-mobile.jpg') ;
+}
+
 #banner-2 h1 {
     font-size: 1.5rem;
     transform: translateY(-6rem) scale(.7);
@@ -179,6 +207,9 @@ https://wallpaperaccess.com/full/699923.jpg */
 }
 
 /* banner3 styles */
+#banner-3.active::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/446162-best-call-of-duty-wallpaper-for-the-fan.jpg') ;
+}
 #banner-3 h1 {
     font-size: 3.25rem;
     letter-spacing: 5px;
@@ -212,6 +243,10 @@ https://wallpaperaccess.com/full/699923.jpg */
     bottom: -3rem;
 }
 /* banner-4 */
+#banner-4.active::before {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/474391-call-of-duty-modern-warfare-2-wallpaper-game-wallpaper.jpg') ;
+}
+
 #banner-4 h1 {
     line-height: 2rem;
     font-size: 3.5rem;
