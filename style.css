@@ -25,6 +25,7 @@ https://wallpaperaccess.com/full/699923.jpg */
     display: grid;
     grid-template-columns: repeat(4,1fr);
     column-gap: 1rem;
+    overflow: hidden;
 }
 
 .banner-wrapper .banner {
@@ -36,8 +37,10 @@ https://wallpaperaccess.com/full/699923.jpg */
     align-items: center;
     background-color: transparent;
     box-shadow: 5px 0px 10px rgba(0, 0, 0, 0);
+    width: 100%;
     position: relative;
-    transition: box-shadow .6s ease-out;
+    margin-left: 0;
+    transition: box-shadow .6s ease-out, width .3s ease, margin .3s ease;
 }
 
 .banner-wrapper .banner::after {
@@ -114,6 +117,7 @@ https://wallpaperaccess.com/full/699923.jpg */
 /* active banner styles */
 .banner.active {
     box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
+    width: 105%;
 }
 .banner.active h1, #banner-2.active h1, #banner-3.active h1, #banner-4.active h1{
     color: #ffffff;
@@ -232,7 +236,7 @@ https://wallpaperaccess.com/full/699923.jpg */
     letter-spacing: 3px !important;
 }
 #banner-4 .banner__btns {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 #banner-4 .banner__stat {
     bottom: -2.75rem;
