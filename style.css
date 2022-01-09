@@ -279,3 +279,31 @@ https://wallpaperaccess.com/full/699923.jpg */
 #banner-4 .banner__stat {
     bottom: -2.75rem;
 }
+
+/* small details styling */
+#menu {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 3rem;
+    display: flex;
+    color: #ffffff;
+}
+#menu .item {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+}
+#menu .item img {
+    filter: invert(1); 
+    width: 23px;
+    height: auto;
+    padding-right: .5rem;
+}
+#menu .item span._pill {
+    width: 8px;
+    height: 15px;
+    background-color: #ffffff66;
+    display: inline-block;
+    margin-right: .5rem;
+    border-radius: 50px;
+}
