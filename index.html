@@ -65,10 +65,19 @@
     </main>
 
     <script>
+        const bannerWrapper = document.querySelector('.banner-wrapper')
         const banners = document.querySelectorAll('.banner')
-        banners.forEach(item => item.addEventListener('mouseover', function () {
+        banners.forEach(item => item.addEventListener('mouseover', function (event) {
                 this.classList.add('active');
-                // remove or hide all other banner background images and show curret banner bg
+                if(event.target.id === 'banner-1') {
+                    bannerWrapper.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://i.ibb.co/dKRm4R1/1.png')`
+                } else if(event.target.id === 'banner-2') {
+                    bannerWrapper.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://www.videogameschronicle.com/files/2021/10/call-of-duty-warzone-pacific-3.jpeg')`
+                } else if(event.target.id === 'banner-3') {
+                    bannerWrapper.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/446162-best-call-of-duty-wallpaper-for-the-fan.jpg')`
+                } else if(event.target.id === 'banner-4') {
+                    bannerWrapper.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/474391-call-of-duty-modern-warfare-2-wallpaper-game-wallpaper.jpg')`
+                }
         }));
         banners.forEach(item => item.addEventListener('mouseleave', function () {
                 this.classList.remove('active');

@@ -21,7 +21,7 @@ https://wallpaperaccess.com/full/699923.jpg */
     width: 100vw;
     background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('1.png');
     background-size: cover;
-    background-position: -32px -37px;
+    background-position: center center;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     /*column-gap: 1rem;*/
@@ -52,8 +52,7 @@ https://wallpaperaccess.com/full/699923.jpg */
     right: -75vw;
     top: 0vh;
     background-size: cover ;
-    background-position: bottom left;
-    animation: scale 5s linear infinite alternate;
+    animation: scale 7s linear infinite alternate;
 }
 @keyframes scale {
     0% {
@@ -172,7 +171,8 @@ https://wallpaperaccess.com/full/699923.jpg */
 }
 /* banner1-active styles */
 #banner-1.active::before {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('1.png') ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0,0,0,0.15)), url('1.png') ;
+    background-position: bottom left;
 }
 
 #banner-1.active h1 span._van {
@@ -181,7 +181,8 @@ https://wallpaperaccess.com/full/699923.jpg */
 
 /* banner2 styles */
 #banner-2.active::before {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/309184-call-of-duty-mobile-wallpaper-top-free-call-of-duty-mobile.jpg') ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0,0,0,0.15)), url('https://www.videogameschronicle.com/files/2021/10/call-of-duty-warzone-pacific-3.jpeg') ;
+    background-position: -18rem -.75rem;
 }
 
 #banner-2 h1 {
@@ -209,6 +210,7 @@ https://wallpaperaccess.com/full/699923.jpg */
 /* banner3 styles */
 #banner-3.active::before {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/446162-best-call-of-duty-wallpaper-for-the-fan.jpg') ;
+    background-position: -38rem -.7rem;
 }
 #banner-3 h1 {
     font-size: 3.25rem;
@@ -244,7 +246,8 @@ https://wallpaperaccess.com/full/699923.jpg */
 }
 /* banner-4 */
 #banner-4.active::before {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/474391-call-of-duty-modern-warfare-2-wallpaper-game-wallpaper.jpg') ;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.15),rgba(0,0,0,0.15)), url('https://wallpaperbat.com/img/474391-call-of-duty-modern-warfare-2-wallpaper-game-wallpaper.jpg') ;
+    background-position: -50rem 0;
 }
 
 #banner-4 h1 {
