@@ -1,0 +1,239 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'cod'; /*a name to be used later*/
+    src: url('cod.otf'); /*URL to font*/
+}
+@font-face {
+    font-family: 'saria'; /*a name to be used later*/
+    src: url('saria_light.ttf'); /*URL to font*/
+}
+/* https://wallpaperbat.com/img/474391-call-of-duty-modern-warfare-2-wallpaper-game-wallpaper.jpg
+https://wallpaperbat.com/img/446162-best-call-of-duty-wallpaper-for-the-fan.jpg
+https://wallpaperbat.com/img/309184-call-of-duty-mobile-wallpaper-top-free-call-of-duty-mobile.jpg
+https://wallpaperaccess.com/full/699923.jpg */
+
+.banner-wrapper {
+    height: 100vh;
+    width: 100vw;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5),rgba(0,0,0,0.5)), url('https://wallpaperbat.com/img/309184-call-of-duty-mobile-wallpaper-top-free-call-of-duty-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    column-gap: 1rem;
+}
+
+.banner-wrapper .banner {
+    font-family: 'cod';
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0);
+    position: relative;
+    transition: box-shadow .6s ease-out;
+}
+
+.banner-wrapper .banner::after {
+    position: absolute;
+    content: '';
+    background-color: #ffffff66;
+    width: 1px;
+    height: 25rem;
+    right: 0;
+}
+
+.banner-wrapper .banner h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #ffffff66;
+    transform: translateY(-5rem) scale(.7);
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.banner__btns {
+    display: flex;
+    flex-direction: column;
+    transform: scaleX(0);
+    transition: transform .3s ease;
+}
+
+.banner__btns > *{
+    padding: .2rem 2rem;
+    margin-bottom: .1rem;
+    font-size: 1.2rem;
+    border: 1px solid transparent;
+    color: #ffffff66;
+    background-color: transparent;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.banner__btns button.active {
+    background-color: #ffffff79;
+    color: #C1001B;
+}
+.banner__btns button:hover {
+    background-color: #ffffff79;
+    color: #ffffff83;
+}
+
+.banner__stat {
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -5rem;
+}
+
+.banner__stat img {
+    width: 1.5rem;
+    filter: invert(81%) sepia(3%) saturate(10%) hue-rotate(314deg) brightness(85%) contrast(84%);
+}
+.banner__stat p {
+    color: #ffffff6b;
+    font-family: 'saria';
+}
+.banner__stat p span.stat-text {
+    display: inline-block;
+    margin-left: -4.5rem;
+    opacity: 0;
+    transition: .3s ease;
+}
+
+.banner.active .banner__stat p span.stat-text {
+    margin-left: 0;
+    opacity: 1;
+}
+
+/* active banner styles */
+.banner.active {
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.banner.active h1, #banner-2.active h1, #banner-3.active h1, #banner-4.active h1{
+    color: #ffffff;
+    transform: translateY(0) scale(1);
+}
+
+.banner.active .banner__btns {
+    transform: scaleX(1);
+}
+
+/* banner 1 */
+#banner-1 h1 {
+    font-size: 3.25rem;
+    letter-spacing: 5px;
+    line-height: 3rem;
+}
+#banner-1 h1 span._of1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    /* these codes are used to get exact call of duty heading text style */
+    display: inline-block;
+    padding-right: 5px;
+    margin-left: -5px;
+    vertical-align: super;
+}
+#banner-1 h1 span._van {
+    letter-spacing: 10px;
+    margin-left: 10px; /* font seemed to be a bit off left*/
+    color: #ffffff66;
+    font-family: 'saria';
+    text-transform: uppercase;
+}
+/* banner1-active styles */
+#banner-1.active h1 span._van {
+    color: #C1001B;
+}
+
+/* banner2 styles */
+#banner-2 h1 {
+    font-size: 1.5rem;
+    transform: translateY(-6rem) scale(.7);
+}
+#banner-2 h1 span._of2 {
+    font-size: .85rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-right: 5px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+#banner-2 h1 span._war {
+    font-size: 3.5rem;
+}
+#banner-2 .banner__btns {
+    margin-bottom: 3rem;
+}
+#banner-2 .banner__stat {
+    bottom: -5.75rem;
+}
+
+/* banner3 styles */
+#banner-3 h1 {
+    font-size: 3.25rem;
+    letter-spacing: 5px;
+    line-height: 2.5rem;
+    transform: translateY(-3.5rem) scale(.7);
+}
+#banner-3 h1 span._of1 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    /* these codes are used to get exact call of duty heading text style */
+    display: inline-block;
+    padding-right: 5px;
+    margin-left: -5px;
+    vertical-align: super;
+}
+#banner-3 h1 span._van {
+    letter-spacing: 15px;
+    margin-left: 10px; /* font seemed to be a bit off left*/
+    color: #ffffff66;
+    font-family: 'saria';
+    text-transform: uppercase;
+}
+#banner-3 h1 span._ops {
+    letter-spacing: 3px;
+    font-size: 2.75rem;
+}
+#banner-3 h1 span._cold {
+    font-size: 3.75rem;
+}
+#banner-3 .banner__stat {
+    bottom: -3rem;
+}
+/* banner-4 */
+#banner-4 h1 {
+    line-height: 2rem;
+    font-size: 3.5rem;
+    transform: translateY(-3rem) scale(.7);
+}
+#banner-4 h1 span._of2 {
+    font-size: .85rem;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding-right: 5px;
+    margin-left: 5px;
+    vertical-align: top;
+}
+#banner-4 h1 span._war {
+    font-family: 'saria';
+    display: inline-block;
+    line-height: 2.75rem;
+    margin-top: .5rem;
+    text-transform: uppercase;
+}
+#banner h1 span._mod {
+    letter-spacing: 3px !important;
+}
+#banner-4 .banner__btns {
+    margin-bottom: 3rem;
+}
+#banner-4 .banner__stat {
+    bottom: -2.75rem;
+}

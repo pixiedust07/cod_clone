@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call of Duty | Vanguard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- This will contain the whole layout -->
+    <main class="banner-wrapper">
+        <!-- banner which expands on hover -->
+        <section class="banner" id="banner-1">
+            <h1>Call<span class="_of1">of</span>Duty <span class="_van">Vanguard</span></h1>
+            <div class="banner__btns">
+                <button class="active">CAMPAIGN</button>
+                <button>MULTIPLAYER</button>
+                <button>ZOMBIES</button>
+            </div>
+            <div class="banner__stat">
+                <img src="https://img.icons8.com/external-gradak-royyan-wijaya/50/000000/external-identity-gradak-user-gradak-royyan-wijaya-4.png" />
+                <p><span class="stat-text">Friends playing</span> <span> 12 </span></p>
+            </div>
+        </section>
+
+        <section class="banner" id="banner-2">
+            <h1>Call<span class="_of2">of</span>Duty <span class="_war">warzone</span></h1>
+            <div class="banner__btns">
+                <button class="active">PLAY NOW</button>
+            </div>
+            <div class="banner__stat">
+                <img src="https://img.icons8.com/external-gradak-royyan-wijaya/50/000000/external-identity-gradak-user-gradak-royyan-wijaya-4.png" />
+                <p><span class="stat-text">Friends playing</span> <span> 12 </span></p>
+            </div>
+        </section>
+
+        <section class="banner" id="banner-3">
+            <h1>Call<span class="_of1">of</span>Duty <span class="_van _ops">Black ops</span><br> <span class="_van _cold">COLD WAR</span></h1>
+            <div class="banner__btns">
+                <button class="active">CAMPAIGN</button>
+                <button>MULTIPLAYER</button>
+                <button>ZOMBIES</button>
+                <button>League Play</button>
+            </div>
+            <div class="banner__stat">
+                <img src="https://img.icons8.com/external-gradak-royyan-wijaya/50/000000/external-identity-gradak-user-gradak-royyan-wijaya-4.png" />
+                <p><span class="stat-text">Friends playing</span> <span> 12 </span></p>
+            </div>
+        </section>
+
+        <section class="banner" id="banner-4">
+            <h1>Call<span class="_of2">of</span>Duty <br><span class="_war"><span class="_mod">Modern</span> <br> Warfare</span></h1>
+            <div class="banner__btns">
+                <button class="active">CAMPAIGN</button>
+                <button>MULTIPLAYER</button>
+                <button>CO-OP</button>
+            </div>
+            <div class="banner__stat">
+                <img src="https://img.icons8.com/external-gradak-royyan-wijaya/50/000000/external-identity-gradak-user-gradak-royyan-wijaya-4.png" />
+                <p><span class="stat-text">Friends playing</span> <span> 12 </span></p>
+            </div>
+        </section>
+        <!-- other small details later -->
+    </main>
+
+    <script>
+        const banners = document.querySelectorAll('.banner')
+        banners.forEach(item => item.addEventListener('mouseover', function () {
+                this.classList.add('active');
+        }));
+        banners.forEach(item => item.addEventListener('mouseleave', function () {
+                this.classList.remove('active');
+        }));
+    </script>
+</body>
+</html>
